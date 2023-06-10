@@ -17,7 +17,7 @@ h1 = 935*scrn
 
 start = False
 window = Tk()
-window.title('Bulletistic movement')
+window.title('Balletistic movement')
 window.state('zoomed')
 window.geometry(str(int(1920*scrn)) + 'x' + str(int(1080*scrn)))
 window.wm_attributes('-alpha', 0.99)
@@ -27,7 +27,7 @@ cnvs.place(x = 0, y = 0)
 cnvsB = Canvas(window, width = 1620*scrn, height = 935*scrn, highlightthickness = 0, bg = bg_sec)
 cnvsB.place(x = 40*scrn, y = 40*scrn)
 
-Label(window, text="ПАРАМЕТРЫ", font = ('Arial Black', int(17*scrn)), bg = bg, fg = aaaa, justify=CENTER).place(x = 1670*scrn, y = 40*scrn)
+Label(window, text="Parameters", font = ('Arial Black', int(17*scrn)), bg = bg, fg = aaaa, justify=CENTER).place(x = 1670*scrn, y = 40*scrn)
 Label(window, text="Y", font = ('Arial', int(13*scrn)), bg = bg, justify=CENTER, fg = drkGr).place(x = 40*scrn, y = 15*scrn)
 Label(window, text="X", font = ('Arial', int(13*scrn)), bg = bg, justify=CENTER, fg = drkGr).place(x = 1640*scrn, y = 975*scrn)
 
@@ -105,9 +105,11 @@ def act(action):
 		motion()
 
 g = 9.81		
-text = ['Target', 'Projectile', 'Environment', "Target Radius R", 'Target Distance L', 'Target Height H',
-'Beginning projectile speed V₀', 'Angle to the horizon α ⁰', 'Material density', 'Media density',
-'Media viscosity', 'START', 'CLEAR']
+text = ['Target', 'Projectile', 'Environment', 							# headers
+	'Target Radius R', 'Target Distance L', 'Target Height H', 				# target
+	'Beginning projectile speed V₀', 'Angle to the horizon α ⁰', 'Material density', 	# projectile
+	'Density', 'Viscosity', 								# environment
+	'START', 'CLEAR']									# buttons
 
 def entr():
 	return Entry(window,  font=(fnt,int(14*scrn)), fg = ctext, bg = bg_sec,  borderwidth = 0, justify = CENTER)

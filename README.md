@@ -8,4 +8,4 @@
 ### Stack
 Python, tkinter
 
-![preview]("/preview.png")
+![preview](/preview.png)
